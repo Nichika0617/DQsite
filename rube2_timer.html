@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ルべランギス 強さ2 光床タイマー 25%まで</title>
+</head>
+<body>
+  <h3>ルべランギス 強さ2 光床タイマー 50%まで</h3>
+  <p>残り時間: <span id="countdown">4</span> 秒</p>
+  <button id="toggle-timer">スタート</button>
+  <button id="minus-1">-1秒</button>
+  <button id="plus-1">+1秒</button>
+  <p style="color: red;">HPが赤くなってグランドカラミティがきたらエンターキーを押す!</p>
+  
+  <p>途中でサークルディザスターが来たらスペースキーを2回押す!</p>
+  
+  
+  <audio id="beep-sound">
+    <source src="audio/alarm.mp3" type="audio/mpeg">
+    
+  </audio>
+
+  <h3>使い方</h3>
+  <p>サークルカラミティ,サークルディザスターが見えたらスペースキーでタイマーをスタートしてください.</p>
+  <p>音を聞いたら攻撃はやめて回避準備をしよう!</p>
+  <p>スペースキーまたはクリックでスタート,ストップ.</p>
+  <p>ストップ後さらにスペースキーでリセット→スタート</p>
+  <p>サークルカラミティ,サークルディザスターが見えてから初回のみ5秒後に床が光ります.</p>
+  <p>以降19秒ごとに光ります.</p>
+  
+  
+
+  <script>
+    let timeLeft = 4;  // 初期残り時間（秒）
+    let timerInterval = null;
+    const countdownDisplay = document.getElementById('countdown');
+    const beepSound = document.getElementById('beep-sound');
+    const toggleButton = document.getElementById('toggle-timer');
+    const minusButton = document.getElementById('minus-1');
+    const plusButton = document.getElementById('plus-1');
+
+
+    // カウントダウン更新関数
+    function updateCountdown() {
+      if (timeLeft > 1) {
+        timeLeft -= 1;
+        countdownDisplay.textContent = timeLeft;
+      } else {
+        beepSound.currentTime = 0;  // 再生位置をリセット
+        beepSound.play();           // 音を再生
+        timeLeft = 19;  // リセットして再カウントダウン
+        countdownDisplay.textContent = 0;
+      }
+    }
+
+    // タイマーの開始・停止切り替え
+    function toggleTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);  // タイマー停止
+        timerInterval = null;
+        timeLeft = 4;  // 残り時間リセット
+        countdownDisplay.textContent = timeLeft;
+        toggleButton.textContent = 'スタート';
+      } else {
+        timerInterval = setInterval(updateCountdown, 1000);  // タイマー開始
+        toggleButton.textContent = 'ストップ';
+      }
+    }
+
+    
+
+    // ボタンのクリックイベントを設定
+    toggleButton.addEventListener('click', toggleTimer);
+
+    // -1秒ボタン
+    minusButton.addEventListener('click', () => {
+      if (timeLeft > 1) {  // 1秒未満にはしない
+        timeLeft -= 1;
+        countdownDisplay.textContent = timeLeft;
+      }
+    });
+
+    // +1秒ボタン
+    plusButton.addEventListener('click', () => {
+      timeLeft += 1;
+      countdownDisplay.textContent = timeLeft;
+    });
+
+
+    // エンターキーが押された場合にページを移動
+    document.addEventListener('keydown', (event) => {
+      if (event.code === 'Enter') {
+        window.location.href = 'rube2_timer_red.html';  // 移動先のURL
+      } else if (event.code === 'Space') {
+        event.preventDefault();  
+        toggleButton.click();    
+      }})
+  </script>
+</body>
+</html>

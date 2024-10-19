@@ -56,6 +56,17 @@ target.setAttribute("datetime", datetimeText);
 
 
 
+
+function disp(url){
+
+	window.open(url, "window_name", "width=300,height=200,scrollbars=yes");
+
+}
+
+// -->
+
+
+
 (function($) {
 
 	var	$window = $(window),
