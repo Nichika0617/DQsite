@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メイヴ 石割りタイマー</title>
+</head>
+<body>
+  <h3>メイヴ石割りタイマー</h3>
+  <p>残り時間: <span id="countdown">30</span> 秒</p>
+  
+  <!-- <button id="toggle-timer">スタート</button> -->
+  <button id="set-30">ゲノムバース</button>
+  <button id="set-18">〇〇の侵食！</button>
+  <br>
+  <p style="color: red;">5秒前に音がなります.</p>
+  <p>ぺチ:1.5秒前(音が鳴ってから3秒後)</p>
+  <p>ロストスナイプ:3.5秒前(音が鳴ってから2秒後)</p>
+  <br>
+  
+  <audio id="beep-sound">
+    <source src="audio/alarm.mp3" type="audio/mpeg">
+    
+  </audio>
+
+  <h3>使い方</h3>
+  <p>ゲノムバースが見えたら「ゲノムバース」ボタン or スペースキー</p>
+  <p>見逃してしまった時は〇〇の侵食！が見えてから「〇〇の侵食！」ボタン</p>  
+  
+
+  <script>
+    let timeLeft = 30;
+    let timerInterval = null;
+    const countdownDisplay = document.getElementById('countdown');
+    const beepSound = document.getElementById('beep-sound');
+    const toggleButton = document.getElementById('toggle-timer');
+    const set30Button = document.getElementById('set-30');
+    const set18Button = document.getElementById('set-18');
+
+    // タイマーを更新する関数
+    function updateCountdown() {
+      if (timeLeft > 0) {
+        timeLeft -= 1;
+        countdownDisplay.textContent = timeLeft;
+      } else {
+        beepSound.currentTime = 0;
+        beepSound.play();
+        stopTimer();  // タイマーが0になると停止
+      }
+    }
+
+    // タイマーをスタートする関数
+    function startTimer() {
+      if (!timerInterval) {
+        timerInterval = setInterval(updateCountdown, 1000);
+      }
+    }
+
+    // タイマーを停止する関数
+    function stopTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+    }
+
+    // タイマーをリセットしてスタート
+    function resetTimer(initialTime = 30) {
+      stopTimer();
+      timeLeft = initialTime-6 ; //  5秒前に音を鳴らす
+      countdownDisplay.textContent = timeLeft;
+      startTimer();
+    }
+    // 30秒タイマー設定＆スタート
+    set30Button.addEventListener('click', () => resetTimer(30));
+
+    // 10秒タイマー設定
+    set18Button.addEventListener('click', () => resetTimer(18));
+
+    // スペースキー押下で30秒タイマーリセット＆スタート
+    document.addEventListener('keydown', (event) => {
+      if (event.code === 'Space') {
+        event.preventDefault();
+        resetTimer(30);
+      }
+    });
+
+    // ページ読み込み時に30秒タイマーを自動スタート
+    // window.onload = startTimer();
+    // window.onload = stopTimer();
+  </script>
+</body>
+</html>
