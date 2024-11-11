@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>バトル知識まとめ</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong></strong> <span>ホームに戻る</span></a>
+						
+                        <a href="knowledge.html" class="logo"><strong></strong> <span>[知識集]に戻る</span></a>
+                            
+					</header>
+
+                    <section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>バトル知識集</h1>
+							</header>
+							<div class="content">
+								<!-- <p></p> -->
+								<p style="text-align:right">最終更新: <time id="modified_date"></time></p>
+								
+								
+								
+								<!-- <ul class="actions">
+									<li><a href="#one" class="button next scrolly">Get Started</a></li>
+								</ul> -->
+							</div>
+						</div>
+					</section>
+
+
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+                                <div class="inner">
+									<!-- <span class="image main"><img src="images/pic11.jpg" alt="" /></span> -->
+                                    
+                                    <br>
+                                    <h3>目次</h3>
+                                    <ol>
+                                        <li>
+                                            <a href="#batoru">バトル豆知識</a>
+                                        </li>
+                                        <li>
+                                            <a href="#rare">レアドロップについて</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#set">武器装備の錬金効果，セット効果について</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#sirohako">白箱について</a>
+                                        </li>
+                                    </ol>
+                                    
+                                    <br>
+                                    <!-- <p><a href="meibu_isiwari_timer.html" target="window_name" onClick="disp('meibu_isiwari_timer')">石割りタイマー 強さ5</a></p> -->
+                                    
+                                    <hr class="hr1"> 
+                                    <!-- 区切り線 -->
+									
+                                    <h3 id="batoru">バトル豆知識</h3>
+
+                                    <div class="inner">
+                                        <a href="#main">ページ上に戻る</a>
+                                    </div>
+                                    <br>
+
+                                    <ol style="list-style-type: circle;">
+                                        <li>わたあめジャンプの効果は10秒.ジャンプしておけば次の1~2ターンは足元攻撃無効になる.</li>
+                                        <li>ファランクス，アイギスの被ダメージ減少の効果は30秒．</li>
+                                        <li>アイギスのビッグシールド，会心ガードの効果はそれぞれ180秒，120秒で，アイギスのCTはIIIで110秒だから，アイギスがループできるなら会心ガードとかビッグシールドは自動でループする．使わなくていい．</li>
+                                        <br>
+                                        <li>ひっさつコマンドは90秒,残り30秒で表示が黄色になる.もし仮面に祈りつけてるならば，必殺チャージ時に祈りがかかる(効果時間2分)．なので，コマンドがある時間は祈りは消えない.コマンドが切れてから30秒で祈りが切れる．</li>
+                                        <li>チャンスコマンドは45秒.一度使用すると300秒経過するか，死亡するまで再度チャージは発生しない．</li>
+                                        <br>
+                                        <li>敵のために立ち壁になることで，後衛タゲの攻撃時に敵の移動を妨害することができる．移動干渉．バフや敵によっても変わるが，大体14秒くらいで敵は移動をやめ，即死級のエンド攻撃を使ってくる(ターンエンド)</li>
+                                        <li>敵の反撃ゲージが溜まり切ってから(約10秒)，ターンエンドが発動する3秒くらいの間に後衛が敢えて敵に追い付かれることで，即死級のエンド攻撃を前衛が避けることができる．後衛タゲの攻撃→反撃行動という動きをする．後衛が殴られている間に前衛は避難準備をする．</li>
+                                        <br>
+                                        <li>反撃行動は行動AI行動回数にAI3回行動の場合，AI1→反撃行動→AI2→AI3→AI1とかいう流れになる．</li>
+                                        <li>モードチェンジではAI行動回数はリセットされない．AI1→90%モードチェンジ→AI2といった感じ．</li>
+                                        <li>モードチェンジによってAI数が変わる場合，AI2→AI3の場合，90%までAI1→90%到達→AI2→AI3と続く．AI2のときは，AI2→90%到達→AI1→AI2→AI3となる．</li>
+
+                                        <li>モードチェンジ後のAI1はゲージを貯めずにすぐ発動する場合がある．だから，例えばAI2がキャンセルされてモードチェンジした場合，AI1→AI2(キャンセル)→AI3→AI4(AI1)→AI5(AI2)→AI6(AI3)といった，5回攻撃になる可能性がある．だから回復が忙しそうな時には殴らないほうがいいかも．回復が追いつかない時がある．</li>
+                                        <li>2~3秒硬直したり，一番近い人に振り向き範囲攻撃をしたり．タゲから離れるように歩いたり，CTCが起きたりしたときはAI1だと判断することができる．</li>
+
+                                        <br>
+                                        <li>モンスターは次に行う行動まであらかじめ決めている(<b>仮決定</b>)</li>
+                                        <li>実際に選択された行動を<b>本決定</b>という</li>
+                                        <li>そこで，仮決定していた攻撃対象が死んでいた，範囲に誰もいなかった，マホカンタされた，CTが溜まっていなかった．といった場合に，行動がキャンセルされ，(<b>行動破棄</b>)，異なる行動が選ばれる可能性がある．</li>
+                                        <li>スコルパイドが後衛にですスコルピオを打とうとして歩き始めたけどCTが溜まっていなくて，急に紅蓮の熱波をうった．とか</li>
+
+                                        <li>これが<b>CTC</b>のしくみ．CTは厳密にはチャージタイムじゃなくてクールタイムだけどまあチャージタイムキャンセルでいいかなといった感じだそう．</li>
+
+                                        <li>CTを消費する行動を取った後のAI1でしか凶悪なCTCは発生しないから，AI3とAI1には特に注意．AI2やAI3でもCTCは発生することがある．それは固定ローテの時．メイヴ5であれば，ゲノムバース→どろはきと固定行動があるけど，どろはき→ゲノムバースときたときにまだどろはきのCTが溜まっていないから打てない．キャンセルして回転アタックとかすることある．厄介．
+                                        </li>
+                                        
+                                    </ol>
+
+
+                                    <hr class="hr1"> 
+                                    <!-- 区切り線 -->
+									
+                                    <h3 id="rare">レアドロップについて</h3>
+
+                                    <div class="inner">
+                                        <a href="#main">ページ上に戻る</a>
+                                    </div>
+                                    <br>
+
+                                    <ol style="list-style-type: circle;">
+                                        <li>モンスターが落とすアイテムには二種類ある．通常ドロップアイテム(通ドロ)とレアドロップアイテム(レアドロ)</li>
+                                        
+                                    </ol>
+                                    <b>レアドロップ率の上げ方</b>
+                                    <ol style="list-style-type:square">
+                                            <li>ウデ装備の錬金</li>
+                                            <li>輝石のベルトの輝石効果</li>
+                                            <li>アクセ:おうじょのあいの合成効果</li>
+                                            <li>アクセ:幸運のおまもりの合成効果</li>
+                                    </ol>
+
+                                    <ol style="list-style-type: circle;">
+                                        <li>ウデにレアドロップ率1.5倍が3つ付いている時，1.5×1.5×1.5の3.375倍ではなく，小数点以下を加算する.つまり,1.5+0.5+0.5で2.5倍となる．</li>
+                                        <li>ウデ以外の装備にレアドロップ率?倍が付いている時も同じで，小数点以下を加算する．</li>
+                                    </ol>
+
+                                    <b>レアドロ理論値は...</b>
+                                    <br>
+                                    <b>・ウデ装備+3→3.3倍</b>
+                                    <ol style="list-style-type: circle;">
+                                            <li>レアドロップ率1.5(+0.4倍)</li>
+                                            <li>レアドロップ率1.5(+0.4倍)</li>
+                                            <li>レアドロップ率1.5倍</li>
+                                        ※パルプンテ効果なので，3つめは大成功不可能
+                                    </ol>
+
+                                    <b>・おうじょのあい(首アクセ)→1.3倍</b>
+                                    <ol style="list-style-type: circle;">
+                                            <li>レアドロップ率1.1倍</li>
+                                            <li>レアドロップ率1.1倍</li>
+                                            <li>レアドロップ率1.1倍</li>
+                                        
+                                    </ol>
+
+                                    <b>・輝石のベルト(腰アクセ)→1.2倍</b>
+                                    <ol style="list-style-type: circle;">
+                                            <li>レアドロップ率1.1倍</li>
+                                            <li>レアドロップ率1.1倍</li>
+                                    
+                                        ※ベルトはドロップ率のみ例外で，1.1倍が二個ついて最大値1.2倍となることがある．
+                                    </ol>
+
+
+                                    <b>・幸運のお守り(その他アクセ)→1.4倍</b>
+                                    <ol style="list-style-type: circle;">
+                                        基礎効果    
+                                        <li>レアドロップ率1.1倍</li>
+                                        合成効果
+                                        <li>レアドロップ率1.1倍</li>
+                                        <li>レアドロップ率1.1倍</li>
+                                        <li>レアドロップ率1.1倍</li>
+                                    </ol>
+
+                                    <b>→3.3+0.3+0.2+0.4=4.2倍となる</b>
+                                    <br>
+
+                                    <ol style="list-style-type: circle;">
+                                        <li>モンスターごとにもレアドロップ率は決まっていて，例えばモーモン強のやわらかウールなら0.5%といわれている．</li>
+                                        <li>レアドロ理論値の場合，これにかけて，0.5×4.2=2.1% となる．</li>
+                                        <li>レアドロップ率はパーティメンバーの中で一番高い人の値が参照される．みんなで理論値装備して4の4乗で256倍になるとかはない..こんなんなったらやばいからね..</li>
+                                    </ol>
+
+                                    そしてモンスターそれぞれにはドロップ枠っていうものがある
+                                    <ol>
+                                        
+                                        <li>ドロップ枠</li>
+                                        <li>盗賊の[盗み]枠</li>
+                                        <li>盗賊の[証]枠</li>
+                                        <li>その他宝珠とか装備とかの枠</li>
+                                    </ol>
+
+                                    <ol style="list-style-type: circle;">
+                                        <li>だから一匹から最大3個ドロップする可能性がある．</li>
+                                        <li>レアドロップ率?倍の影響を受けるのは1つめの[ドロップ枠]のみ</li>
+                                        <li>盗賊のきようさが高いほど2つめの盗みは成功しやすくなる．1000くらいあるとすごい．2024/11/11現在</li>
+                                    </ol>
+
+                                    <hr class="hr1"> 
+                                    <!-- 区切り線 -->
+									
+                                    <h3 id="set">武器装備の錬金効果，セット効果について</h3>
+
+                                    <div class="inner">
+                                        <a href="#main">ページ上に戻る</a>
+                                    </div>
+                                    <br>
+                                    <ol style="list-style-type: circle;">
+                                        <li>version5.3で変更があった</li>
+                                    </ol>
+
+                                    <b>攻撃時... の定義</b>
+                                    <ol style="list-style-type: circle;">
+                                        <li>通常攻撃(Aペチ)</li>
+                                        <li>ダメージのある武器の特技全て</li>
+                                    </ol>
+
+                                    <b>攻撃時... ではないもの</b>
+                                    <ol style="list-style-type: circle;">
+                                        <li>職業スキル(天下無双とか)</li>
+                                        <li>仲間モンスターの固有技</li>
+                                        <li>呪文</li>
+                                        <li>タロット</li>
+                                        <li>ひっさつ</li>
+                                        <li>チャンスとくぎ</li>
+                                        <li>ダメージのない武器特技</li>
+                                    </ol>
+
+                                    だから，攻撃時CT短縮があってもずっと天下無双してたらCT短縮されることはない．
+                                    <br>
+                                    <br>
+                                    ただし，特殊なものもある...魔力覚醒は呪文でも発動したり..詳しくは↓↓
+
+                                    <img src="images/attack.png" alt="" data-position="top center" width="600"/>
+
+                                    <br>
+                                    <br>
+
+
+                                    <b>多段攻撃</b>
+                                    <ol style="list-style-type: circle;">
+                                        <li>多段攻撃では最初の1回目で攻撃時~の判定が行われる．</li>
+                                        <li>はやぶさぎりとか．</li>
+                                        <li>だけどそうでないものもある...↓↓</li>
+                                    </ol>
+
+
+                                    <b>例外多段攻撃</b>
+                                    <br>
+                                    以下の特技は多段全てで状態異常判定がある
+                                    <ol style="list-style-type: circle;">    
+                                        <li>ムチのAペチ</li>
+                                        <li>ムチ特技(愛のムチ,スパークショット)</li>
+                                        <li>ブメ特技(デュアルカッター,デュアルブレイカー)</li>
+                                    </ol>
+                                    これが旅芸人のブーメランがデバフ最強の理由.固有ブメスキルにも状態異常成功率アップのパッシブがある.
+                                    <br>
+                                    <br>
+
+                                    <b>武器のデバフ錬金効果</b>
+                                    <br>
+                                    例:攻撃時4%でヘナトスが3つ付いた武器とか
+                                    <ol style="list-style-type: circle;">    
+                                        <li>個別に判定が行われる.</li>
+                                        <li>12ではなく,4%×3回,かつ同じ枠内で効果が発動するのは一度まで.</li>
+                                        <li>枠が違うと2回発動があり得る.基礎効果と錬金効果とか.他にも武器とウデとか.</li>                
+                                        <li>だからヘナトスとかは武器とかにヘナトス梅を装備するんじゃなくて，武器とウデに4%,4%とかで分けて装備できると強い.2回下げれるかも.</li>
+                                    </ol>
+                                    <br>
+
+                                    <b>ベルトの錬金効果</b>
+                                    <br>
+                                    種族特攻が乗らない攻撃がある．
+                                    <ol style="list-style-type: circle;">    
+                                        <li><b>タロット(占い師......)</b></li>
+                                        <li>設置方攻撃,爆弾とか</li>
+                                        <li>設置方呪文,ジバ系とか</li>                
+                                    </ol>
+                                    <hr class="hr1"> 
+                                    <!-- 区切り線 -->
+									
+                                    <h3 id="sirohako">白箱について</h3>
+
+                                    <div class="inner">
+                                        <a href="#main">ページ上に戻る</a>
+                                    </div>
+                                    <br>
+
+                                    <ol style="list-style-type: circle;">
+                                        <li>フィールドモンスターを倒した時に装備が入った白い宝箱を落とすことがある．この宝箱のことを白箱という．</li>
+                                        <li>盗む，盗賊の証とか関係なく，ドロップ率を変化させる手段はない．</li>
+                                        <li>ドロップする装備はモンスターごとに決まっており，装備をドロップしないモンスターもいる．</li>
+                                        <li>フィールド以外で戦った時もドロップすることがある(魔法の迷宮,その他)</li>
+                                        <li>ドロップする装備のレベルによって確率が変わり，3~9%.レベルが低いほど落ちやすい．</li>
+                                        <li>装備が決定した後錬金効果の数が決定する．光っていた場合は必ず+3かつ埋め尽くしとなる．光る確率は5%．</li>
+                                        <li>+3の確率は60%,+2の確率は40%</li>
+                                        <li>その部位につく錬金効果から均等の確率で効果が選ばれる．パルプンテに関わらず均等.これが熱いところ．属性梅とかレアドロ埋めとかも狙える．</li>
+                                        <li>錬金効果の大成功の確率は10%,成功は30%で失敗は60%</li>
+                                        <li>大成功の場合でも，理論値は選ばれない．こうげき力6(+1),6(+2)とかについては均等の確率で選ばれる．</li>
+                                        <li>この情報より，例えば雷ダメージ14%減が3つ付いた盾をドロップする確率は，縦のドロップ確率3%,光る確率5%,雷ダメージ減が選ばれる確率0.78%．よって，0.00117% となる．</li>
+                                        <li>光箱以外からドロップする確率は，0.0000008114839% となる．不可能...</li>
+                                        
+                                    </ol>
+							
+                                 
+                                    
+                            </section>
+					
+                </div>
+                    
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<a href="#main">ページ上に戻る</a>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
